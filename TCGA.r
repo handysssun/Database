@@ -17,11 +17,7 @@ legacy <- FALSE # 使用hg38
 
 DataDirectory <-paste0(work_dir,"/GDC/",gsub("-","_",project))
 FileNameData <- paste0(DataDirectory,"_","RNAseq_HTSeq_Counts",".rda")
-query <- GDCquery(project = project,
-data.category =data_category,
-data.type = data_type,
-workflow.type =workflow_type,
-legacy = legacy) # 查询下载的数据情况
+query <- GDCquery(project = project, data.category = data_category, data.type = data_type, workflow.type = workflow_type, legacy = legacy) # 查询下载的数据情况
 
 # 显示下载数据的总样本量
 samplesDown <-getResults(query,cols=c("cases"))
