@@ -1,13 +1,14 @@
-#TCGA数据库（Access TCGA Data）
-#1 数据检索功能（部分需要账号）
+###TCGA数据库（Access TCGA Data）
+##1 数据检索功能（部分需要账号）
 #1.1原始测序数据——fasta和fastq格式文件
 #1.2比对好的bam格式文件
 #1.3经过处理和标准化的文件（完全开放）
   
-#2 数据下载R包（支持断点续传）
+##2 数据下载R包（支持断点续传）
+```
 library(TCGAbiolinks)
 library(SummarizedExperiment) #加载R 包
-
+```
 work_dir <- "D:/colonadenocarcinoma" # 选择工程地点（也就是数据下载的位置）
 project <- "TCGA-COAD" # 选择工程
 data_category <- "TranomeProfiling" # 类似于在网站上直接进行选择，选择转录数据
